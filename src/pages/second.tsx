@@ -7,19 +7,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio Peter." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-          Portfolio de Peter González-Anta
-          <Link href={"/"}> Go Back</Link>
-        </div>
-      </main>
-    </>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+        Portfolio de Peter González-Anta
+        <Link href={"/"}> Go Back</Link>
+      </div>
+    </main>
   );
 }
