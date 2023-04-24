@@ -36,20 +36,16 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-full text-center">
         {images.map((image, index) => (
           <a key={index} href={image.link}>
-            <div className="max-w-640 max-h-640 mx-auto">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={`${
-                  index === currentSlide ? "opacity-100" : "opacity-0"
-                } transition-opacity duration-1000 ease-in-out absolute top-0 left-0 right-0 bottom-0 m-auto`}
-                layout="fixed"
-                width={image.width}
-                height={image.height}
-                objectFit="cover"
-                onClick={() => window.open(image.link, "_blank")}
-              />
-            </div>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className={`${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-1000 ease-in-out absolute top-0 left-0 right-0 bottom-0 m-auto`}
+              width={image.width}
+              height={image.height}
+              objectFit="cover"
+            />
           </a>
         ))}
       </div>
