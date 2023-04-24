@@ -6,8 +6,6 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-config.autoAddCss = false;
 
 interface SliderImageProps {
   src: string;
