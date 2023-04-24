@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,9 +24,9 @@ interface SliderImagesProps {
 const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentSlide((currentSlide + 1) % images.length);
-  };
+  }, [currentSlide, images.length]);
 
   const handlePrev = () => {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
@@ -37,7 +37,7 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
       handleNext();
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide, handleNext]);
 
   return (
     <div className="relative w-full h-96">

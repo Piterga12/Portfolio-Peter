@@ -28,7 +28,7 @@ export default function Home() {
       alt: "Image 3",
       width: 640,
       height: 360,
-      link: "/projects/second",
+      link: "/projects/playwithme",
     },
   ];
   return (
