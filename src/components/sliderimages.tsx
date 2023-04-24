@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 interface SliderImageProps {
   src: string;
@@ -49,17 +57,25 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
           </a>
         ))}
       </div>
-      <div className="absolute top-0 left-0 w-full h-full flex justify-between items-center">
+      <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full">
         <button
-          className="p-2 bg-gray-800 text-white mr-2"
+          className="bg-gray-800 text-white p-2 rounded-full button"
           onClick={handlePrev}
         >
-          Prev
+          <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-        <button className="p-2 bg-gray-800 text-white" onClick={handleNext}>
-          Next
+        <button
+          className="bg-gray-800 text-white p-2 rounded-full button"
+          onClick={handleNext}
+        >
+          <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
+      <style jsx>{`
+        .button:hover {
+          background-color: #4a5568;
+        }
+      `}</style>
     </div>
   );
 };
