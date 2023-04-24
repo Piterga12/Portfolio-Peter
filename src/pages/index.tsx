@@ -14,18 +14,21 @@ export default function Home() {
       alt: "Image 1",
       width: 640,
       height: 360,
+      link: "/projects/second",
     },
     {
       src: "/image2.jpg",
       alt: "Image 2",
       width: 640,
       height: 360,
+      link: "/projects/second",
     },
     {
       src: "/image3.jpg",
       alt: "Image 3",
       width: 640,
       height: 360,
+      link: "/projects/second",
     },
   ];
   return (
