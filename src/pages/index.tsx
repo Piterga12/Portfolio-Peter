@@ -10,16 +10,22 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const images = [
     {
-      src: "/assets/images/image1.jpg",
+      src: "/image1.jpg",
       alt: "Image 1",
+      width: 640,
+      height: 360,
     },
     {
-      src: "/assets/images/image2.jpg",
+      src: "/image2.jpg",
       alt: "Image 2",
+      width: 640,
+      height: 360,
     },
     {
-      src: "/assets/images/image3.jpg",
+      src: "/image3.jpg",
       alt: "Image 3",
+      width: 640,
+      height: 360,
     },
   ];
   return (
@@ -37,11 +43,8 @@ export default function Home() {
       <Menu />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         Portfolio de Peter González-Anta Torrents-Faura
-      </main>
-      <div>
-        <h1>My Home Page</h1>
         <SliderImages images={images} />
-      </div>
+      </main>
     </>
   );
 }
