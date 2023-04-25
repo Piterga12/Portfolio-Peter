@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import {
   faChevronLeft,
   faChevronRight,
