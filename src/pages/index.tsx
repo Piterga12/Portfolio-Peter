@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
 import Menu from "../components/menu";
+import LowMenu from "../components/lowmenu";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
 
@@ -78,6 +79,7 @@ export default function Home() {
         </div>
         <SliderImages images={images} />
       </main>
+      <LowMenu />
     </>
   );
 }
