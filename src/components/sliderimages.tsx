@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,13 +23,19 @@ interface SliderImagesProps {
 
 const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(images.length - 1);
+  const [nextSlide, setNextSlide] = useState(1);
 
   const handleNext = () => {
     setCurrentSlide((currentSlide + 1) % images.length);
+    setPrevSlide(currentSlide);
+    setNextSlide((currentSlide + 2) % images.length);
   };
 
   const handlePrev = () => {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+    setPrevSlide((currentSlide - 1 + images.length) % images.length);
+    setNextSlide(currentSlide);
   };
 
   useEffect(() => {
@@ -52,6 +58,29 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
                 width={image.width}
                 height={image.height}
                 objectFit="cover"
+                style={{ margin: "0 auto", zIndex: 2 }}
+              />
+            )}
+            {index === prevSlide && (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 bottom-0 opacity-25`}
+                width={image.width}
+                height={image.height}
+                objectFit="cover"
+                style={{ zIndex: 1 }}
+              />
+            )}
+            {index === nextSlide && (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className={`transition-opacity duration-1000 ease-in-out absolute top-0 right-0 bottom-0 opacity-25`}
+                width={image.width}
+                height={image.height}
+                objectFit="cover"
+                style={{ zIndex: 1 }}
               />
             )}
           </a>
