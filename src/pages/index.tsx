@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
@@ -10,6 +11,11 @@ import SliderImages from "../components/sliderimages";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [isDark, setIsDark] = useState(false);
+
+  const handleToggle = () => {
+    setIsDark(!isDark);
+  };
   const images = [
     {
       src: "/image1.jpg",
@@ -40,6 +46,9 @@ export default function Home() {
       link: "/projects/playwithme",
     },
   ];
+
+  const background = isDark ? "/backgroundDark.gif" : "/backgroundLight.gif";
+
   return (
     <>
       <Head>
@@ -52,8 +61,8 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Menu />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Menu isDark={isDark} handleToggle={handleToggle} />
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-blue-500 to-purple-500 animate-gradient">
         Portfolio de Peter González-Anta Torrents-Faura
         <div>
           <TextSquare>
@@ -80,6 +89,13 @@ export default function Home() {
         <SliderImages images={images} />
       </main>
       <LowMenu />
+      <style jsx>{`
+        .animate-gradient {
+          background-image: url(${background});
+          background-size: cover;
+          background-position: center;
+        }
+      `}</style>
     </>
   );
 }
