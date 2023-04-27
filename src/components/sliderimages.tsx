@@ -54,33 +54,27 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
               <Image
                 src={image.src}
                 alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 right-0 bottom-0 m-auto`}
+                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 right-0 bottom-0 m-auto object-cover z-20`}
                 width={image.width}
                 height={image.height}
-                objectFit="cover"
-                style={{ margin: "0 auto", zIndex: 2 }}
               />
             )}
             {index === prevSlide && (
               <Image
                 src={image.src}
                 alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 bottom-0 opacity-25`}
+                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 bottom-0 opacity-25 object-cover z-10`}
                 width={image.width}
                 height={image.height}
-                objectFit="cover"
-                style={{ zIndex: 1 }}
               />
             )}
             {index === nextSlide && (
               <Image
                 src={image.src}
                 alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 right-0 bottom-0 opacity-25`}
+                className={`transition-opacity duration-1000 ease-in-out absolute top-0 right-0 bottom-0 opacity-25 object-cover`}
                 width={image.width}
                 height={image.height}
-                objectFit="cover"
-                style={{ zIndex: 1 }}
               />
             )}
           </a>

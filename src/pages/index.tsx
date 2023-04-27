@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
@@ -63,31 +63,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu isDark={isDark} handleToggle={handleToggle} />
-      <main className="flex min-h-screen flex-col items-center justify-between bg-transparent">
-        <section className="relative">
-          <video className="absolute z-[-1]" autoPlay muted loop>
-            <source src="/backgroundLight.mp4" type="video/mp4" />
-          </video>
-          <div className="p-16">
-            <TextSquare>
-              <p className="my-4 z-10">
-                {`Hi, I'm Pedro González Anta Torrents Faura!`}
-              </p>
-              <p className="my-4 z-10">
-                {`I'm a junior video game developer with a strong
+      <main className="bg-transparent">
+        <video className="sticky top-0 z-[-1] w-full" autoPlay muted loop>
+          <source src={background} type="video/mp4" />
+        </video>
+        <div className="my-16">
+          <TextSquare>
+            <p className="my-4 z-10">
+              {`Hi, I'm Pedro González Anta Torrents Faura!`}
+            </p>
+            <p className="my-4 z-10">
+              {`I'm a junior video game developer with a strong
               background in programming languages like C++ and experience using
               Unity to create exciting games. I'm passionate about game
               development, and my LinkedIn profile showcases my academic
               background, experience, and skills in this field.`}
-              </p>
-              <p className="my-4 z-10">
-                {`Through my projects and internships, I have developed strong problem-solving
+            </p>
+            <p className="my-4 z-10">
+              {`Through my projects and internships, I have developed strong problem-solving
               and analytical skills that are essential in game programming. I also
               have experience working collaboratively in teams and meeting project
               deadlines, and I'm committed to delivering high-quality work.`}
-              </p>
-              <p className="my-4 z-10">
-                {`In addition to my technical skills, 
+            </p>
+            <p className="my-4 z-10">
+              {`In addition to my technical skills, 
               I'm fluent in Spanish, Catalan, and English, which can
               be a valuable asset for companies with international operations or
               clients. Overall, I'm a motivated and skilled video
@@ -95,11 +94,10 @@ export default function Home() {
               delivering high-quality work. I'm excited to continue learning
               and growing in my field and to create games that entertain and
               inspire players.`}
-              </p>
-            </TextSquare>
-          </div>
-          <SliderImages images={images} />
-        </section>
+            </p>
+          </TextSquare>
+        </div>
+        <SliderImages images={images} />
       </main>
       <LowMenu />
     </>
