@@ -8,7 +8,7 @@ interface MenuProps {
 
 function Menu({ isDark, handleToggle }: MenuProps) {
   return (
-    <nav className="flex w-full bg-gray-900 text-white justify-between px-6 py-4">
+    <nav className="sticky top-0 flex w-full bg-gray-900 text-white justify-between px-6 py-4">
       <div>
         <Link href={"/"} className="font-bold text-lg">
           Home

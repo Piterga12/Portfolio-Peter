@@ -63,11 +63,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu isDark={isDark} handleToggle={handleToggle} />
-      <main className="bg-transparent">
-        <video className="sticky top-0 z-[-1] w-full" autoPlay muted loop>
+      <main className="min-h-screen items-center justify-between bg-transparent">
+        <video
+          className="fixed z-[-1] w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+        >
           <source src={background} type="video/mp4" />
         </video>
-        <div className="my-16">
+        <div className="margin-top-16">
           <TextSquare>
             <p className="my-4 z-10">
               {`Hi, I'm Pedro González Anta Torrents Faura!`}

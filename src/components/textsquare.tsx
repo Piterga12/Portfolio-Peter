@@ -15,8 +15,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
 }) => {
   return (
     <div
-      className={`bg-${color}-300 rounded-md p-4 text-${size} text-center`}
-      style={{ backgroundColor: "rgb(55 65 81)", margin: "0 100px" }}
+      className={`bg-${color}-700 bg-opacity-80 border-2 border-black rounded-md p-16 text-${size} text-center mx-16`}
     >
       {text ? text : children}
     </div>
