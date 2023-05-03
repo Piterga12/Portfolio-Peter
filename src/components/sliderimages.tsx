@@ -34,8 +34,8 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
 
   const handlePrev = () => {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
-    setPrevSlide((currentSlide - 1 + images.length) % images.length);
     setNextSlide(currentSlide);
+    setPrevSlide(prevSlide === 0 ? images.length - 1 : prevSlide - 1);
   };
 
   useEffect(() => {
