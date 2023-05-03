@@ -14,7 +14,7 @@ interface SliderImageProps {
   alt: string;
   width: number;
   height: number;
-  link: string;
+  link?: string;
 }
 
 interface SliderImagesProps {
@@ -80,16 +80,16 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
           </a>
         ))}
       </div>
-      <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full">
+      <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full pointer-events-none">
         <button
-          className="bg-gray-800 text-white p-2 rounded-full button"
+          className="bg-gray-800 text-white p-2 rounded-full button pointer-events-auto"
           onClick={handlePrev}
         >
           <span className="sr-only">Previous</span>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <button
-          className="bg-gray-800 text-white p-2 rounded-full button"
+          className="bg-gray-800 text-white p-2 rounded-full button pointer-events-auto"
           onClick={handleNext}
         >
           <span className="sr-only">Next</span>
