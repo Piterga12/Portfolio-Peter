@@ -13,11 +13,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const images = [
     {
-      src: "/image1.jpg",
-      alt: "Image 1",
+      src: "/PlayWithMe.png",
+      alt: "Play with Me",
       width: 640,
       height: 360,
-      link: "/projects/second",
+      link: "/projects/playwithme",
     },
     {
       src: "/image2.jpg",
@@ -31,14 +31,14 @@ export default function Home() {
       alt: "Image 3",
       width: 640,
       height: 360,
-      link: "/projects/playwithme",
+      link: "/projects/second",
     },
     {
       src: "/image4.jpg",
       alt: "Image 4",
       width: 640,
       height: 360,
-      link: "/projects/playwithme",
+      link: "/projects/second",
     },
   ];
 
