@@ -13,28 +13,28 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const images = [
     {
-      src: "/PlayWithMe.png",
+      src: "/images/PlayWithMe.png",
       alt: "Play with Me",
       width: 640,
       height: 360,
       link: "/projects/playwithme",
     },
     {
-      src: "/image2.jpg",
+      src: "/images/image2.jpg",
       alt: "Image 2",
       width: 640,
       height: 360,
       link: "/projects/second",
     },
     {
-      src: "/image3.jpg",
+      src: "/images/image3.jpg",
       alt: "Image 3",
       width: 640,
       height: 360,
       link: "/projects/second",
     },
     {
-      src: "/image4.jpg",
+      src: "/images/image4.jpg",
       alt: "Image 4",
       width: 640,
       height: 360,
@@ -62,10 +62,13 @@ export default function Home() {
           muted
           loop
         >
-          <source src="/backgroundLight.mp4" type="video/mp4" />
+          <source src="/videos/backgroundLight.mp4" type="video/mp4" />
         </video>
+        <div>
+          <p className="font-zyzol invisible text-4xl">About Me</p>
+        </div>
         <div className="margin-top-16">
-          <TextSquare imageUrl="/PeterG-A.jpg">
+          <TextSquare imageUrl="/images/PeterG-A.jpg">
             <p className="my-4 z-10">
               {`Hi, I'm Pedro González Anta Torrents Faura!`}
             </p>
