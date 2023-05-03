@@ -24,8 +24,12 @@ const TextSquare: React.FC<TextSquareProps> = ({
     setImageHeight(event.currentTarget.naturalHeight);
   };
 
+  const containerClasses = imageUrl
+    ? "flex flex-col md:flex-row items-center md:mb-8"
+    : "flex flex-col md:flex-row items-center md:mt-16 md:mb-8 md:justify-center";
+
   return (
-    <div className="flex flex-col md:flex-row items-center md:mb-8">
+    <div className={containerClasses}>
       <div
         className={`bg-${color}-700 bg-opacity-80 border-2 border-black rounded-md p-16 text-${size} text-center md:w-1/2 md:ml-32`}
       >

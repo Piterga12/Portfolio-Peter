@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Menu() {
   return (
-    <nav className="sticky top-0 flex w-full bg-gray-900 text-white justify-between px-6 py-4">
+    <nav className="sticky top-0 flex w-full bg-gray-900 text-white justify-between px-6 py-4 z-50">
       <div>
         <Link href={"/"} className="font-bold text-lg">
           Home

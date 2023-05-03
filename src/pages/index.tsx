@@ -95,6 +95,48 @@ export default function Home() {
           </TextSquare>
         </div>
         <SliderImages images={images} />
+        <div className="margin-top-16">
+          <TextSquare>
+            <p className="my-4 z-10">
+              {`I have gained extensive experience as a web programmer during 
+              my tenure at Mon Petit Nicolás in Barcelona. My role involved 
+              developing and maintaining the company's website using WordPress. 
+              I was able to transfer my knowledge to the team, and they eventually 
+              became proficient in managing the site without my assistance.`}
+            </p>
+            <p className="my-4 z-10">
+              {`Additionally, I have experience in sports coaching, having worked
+               as the second coach for the U.E Cornellá's infantil E team. This 
+               role gave me the opportunity to interact with young players and their 
+               parents, honing my communication and interpersonal skills.`}
+            </p>
+            <p className="my-4 z-10">
+              {`I also briefly worked as an attendant at L'Illa Diagonal,
+               where I gained experience in customer service and further developed my people skills.`}
+            </p>
+            <p className="my-4 z-10">
+              {`More recently, I completed an internship at Produktia TV,
+               where I focused on virtual reality programming. I am currently 
+               pursuing a Master's degree in Advanced Programming for AAA Video 
+               Games at the UPC. My strong foundation in programming languages 
+               such as C, C++, and C#, as well as my basic understanding of web 
+               development technologies such as JavaScript, HTML, and CSS, enables 
+               me to contribute to the development of immersive video games.`}
+            </p>
+            <p className="my-4 z-10">
+              {`My advanced people skills and strong computer skills are highly 
+              valuable in the game development industry. The combination of my 
+              practical experience and formal education in game development, as 
+              well as my knowledge of programming languages and web development 
+              technologies, makes me a strong candidate for various roles in the game development industry.`}
+            </p>
+            <p className="my-4 z-10">
+              {`Overall, my diverse range of experience and skills make me a 
+              well-rounded candidate for various job opportunities, especially 
+              in the fields of web programming and game development.`}
+            </p>
+          </TextSquare>
+        </div>
       </main>
       <LowMenu />
     </>
