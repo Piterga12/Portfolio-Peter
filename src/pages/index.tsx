@@ -11,12 +11,6 @@ import SliderImages from "../components/sliderimages";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(false);
-
-  const handleToggle = () => {
-    setIsDark(!isDark);
-    console.log(background);
-  };
   const images = [
     {
       src: "/image1.jpg",
@@ -48,8 +42,6 @@ export default function Home() {
     },
   ];
 
-  const background = isDark ? "/backgroundDark.mp4" : "/backgroundLight.mp4";
-
   return (
     <>
       <Head>
@@ -62,7 +54,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Menu isDark={isDark} handleToggle={handleToggle} />
+      <Menu />
       <main className="min-h-screen items-center justify-between bg-transparent">
         <video
           className="fixed z-[-1] w-full h-full object-cover"
@@ -70,10 +62,10 @@ export default function Home() {
           muted
           loop
         >
-          <source src={background} type="video/mp4" />
+          <source src="/backgroundLight.mp4" type="video/mp4" />
         </video>
         <div className="margin-top-16">
-          <TextSquare>
+          <TextSquare imageUrl="/PeterG-A.jpg">
             <p className="my-4 z-10">
               {`Hi, I'm Pedro González Anta Torrents Faura!`}
             </p>

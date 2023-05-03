@@ -1,12 +1,6 @@
-import { useState } from "react";
 import Link from "next/link";
 
-interface MenuProps {
-  isDark: boolean;
-  handleToggle: () => void;
-}
-
-function Menu({ isDark, handleToggle }: MenuProps) {
+function Menu() {
   return (
     <nav className="sticky top-0 flex w-full bg-gray-900 text-white justify-between px-6 py-4">
       <div>
@@ -23,11 +17,6 @@ function Menu({ isDark, handleToggle }: MenuProps) {
         </li>
         <li className="ml-4">
           <Link href={"/projects/second"}>Contact</Link>
-        </li>
-        <li className="ml-4">
-          <button onClick={handleToggle}>
-            {isDark ? "Light Mode" : "Dark Mode"}
-          </button>
         </li>
       </ul>
     </nav>
