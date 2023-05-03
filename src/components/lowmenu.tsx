@@ -27,13 +27,25 @@ const LowMenu = () => {
   return (
     <div className="bg-gray-700 w-full py-8">
       <nav className="flex justify-end items-center mx-8">
-        <button className="mx-2 mr-4" onClick={handleTwitterClick}>
+        <button
+          className="mx-2 mr-4"
+          onClick={handleTwitterClick}
+          aria-label="Twitter"
+        >
           <FontAwesomeIcon icon={faTwitter} size="2x" />
         </button>
-        <button className="mx-2 mr-4" onClick={handleInstagramClick}>
+        <button
+          className="mx-2 mr-4"
+          onClick={handleInstagramClick}
+          aria-label="Instagram"
+        >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
         </button>
-        <button className="mx-2 mr-4" onClick={handleLinkedInClick}>
+        <button
+          className="mx-2 mr-4"
+          onClick={handleLinkedInClick}
+          aria-label="LinkedIn"
+        >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </button>
       </nav>

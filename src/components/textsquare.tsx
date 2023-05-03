@@ -44,7 +44,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
             src={imageUrl}
             alt="Image"
             width={360}
-            height={360}
+            height={457}
             onLoad={handleImageLoad}
           />
         </div>

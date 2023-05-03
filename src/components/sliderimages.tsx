@@ -85,12 +85,14 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
           className="bg-gray-800 text-white p-2 rounded-full button"
           onClick={handlePrev}
         >
+          <span className="sr-only">Previous</span>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <button
           className="bg-gray-800 text-white p-2 rounded-full button"
           onClick={handleNext}
         >
+          <span className="sr-only">Next</span>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
