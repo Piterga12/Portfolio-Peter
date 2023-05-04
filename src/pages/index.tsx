@@ -27,11 +27,11 @@ export default function Home() {
       link: "/projects/camtoobj",
     },
     {
-      src: "/images/image3.jpg",
-      alt: "Image 3",
+      src: "/images/UnityTest.png",
+      alt: "2D Unity Game Test",
       width: 640,
       height: 360,
-      link: "/projects/second",
+      link: "/projects/unitytest",
     },
     {
       src: "/images/image4.jpg",
