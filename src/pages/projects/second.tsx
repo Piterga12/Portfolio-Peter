@@ -12,7 +12,7 @@ export default function Home() {
       <Menu />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-          Portfolio de Peter González-Anta
+          Page in development sorry for the inconvenience
           <Link href={"/"}> Go Back</Link>
         </div>
       </main>
