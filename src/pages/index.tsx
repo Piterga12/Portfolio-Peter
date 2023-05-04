@@ -20,11 +20,11 @@ export default function Home() {
       link: "/projects/playwithme",
     },
     {
-      src: "/images/image2.jpg",
-      alt: "Image 2",
+      src: "/images/CamToObj.png",
+      alt: "Camera to Obj",
       width: 640,
       height: 360,
-      link: "/projects/second",
+      link: "/projects/camtoobj",
     },
     {
       src: "/images/image3.jpg",

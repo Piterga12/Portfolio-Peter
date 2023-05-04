@@ -6,5 +6,9 @@
   {
     "project": "Vr web",
     "link": "/projects/second"
+  },
+  {
+    "project": "Camera to Obj",
+    "link": "/projects/camtoobj"
   }
 ]
