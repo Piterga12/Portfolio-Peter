@@ -7,6 +7,7 @@ import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
+import Meta from "../components/meta";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,16 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio Peter." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="google-site-verification"
-          content="2jnM1AoXQEkKAfi-2hjdsjt14rkuRzDrkBMPwGtSPu8"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta title="Portfolio" description="Portfolio Peter." />
       <Menu />
       <main className="min-h-screen items-center justify-between bg-transparent">
         <video

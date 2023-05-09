@@ -4,6 +4,7 @@ import Menu from "../../components/menu";
 import TextSquare from "../../components/textsquare";
 import LowMenu from "../../components/lowmenu";
 import SliderImages from "../../components/sliderimages";
+import Meta from "../../components/meta";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -49,6 +50,7 @@ const images = [
 export default function Home() {
   return (
     <>
+      <Meta title="PlayWithMe" description="Play with me." />
       <Menu />
       <video
         className="fixed z-[-1] w-full h-full object-cover"
