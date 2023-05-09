@@ -8,6 +8,7 @@ import LowMenu from "../components/lowmenu";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
 import Meta from "../components/meta";
+import Assistant from "../components/assistant";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -132,6 +133,7 @@ export default function Home() {
             </p>
           </TextSquare>
         </div>
+        <Assistant />
       </main>
       <LowMenu />
     </>
