@@ -5,6 +5,7 @@ import TextSquare from "../../components/textsquare";
 import LowMenu from "../../components/lowmenu";
 import SliderImages from "../../components/sliderimages";
 import Meta from "../../components/meta";
+import { textList2 } from "../../components/texts";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -62,57 +63,23 @@ export default function Home() {
       </video>
       <main className="flex flex-col items-center justify-between">
         <div className="m-4">
-          <p className="font-zyzol text-6xl">Play With Me</p>
+          <p className="font-zyzol text-6xl m-6">Play With Me</p>
           <video autoPlay muted controls>
             <source src="/videos/PlayWithMe-Trailer.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <TextSquare imageUrl="/images/PlayWithMe.png">
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`Creating "Play With Me" has been an incredible experience for me. 
-              As an indie game developer, it was a challenging yet rewarding process 
-              to bring this game to life. I had the opportunity to work with a talented 
-              team of developers who were all passionate about the project.`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`During the development process, I learned so much about game development, 
-              from concept creation to finalizing the game. It was a steep learning curve, 
-              but I was able to pick up skills in programming, game design, and user experience. 
-              I even learned how to use new tools and software to create the game.`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`Overall, the experience of creating "Play With Me" was a highlight 
-              of my career as an indie game developer. I look forward to taking the 
-              lessons I've learned and applying them to future projects.`}
-            </p>
+            {textList2[0]}
+            {textList2[1]}
+            {textList2[2]}
           </TextSquare>
         </div>
         <div>
           <TextSquare>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`Play With Me is a charming puzzle game featuring a lovable 
-              pirate toy as the protagonist. In this indie game, you play 
-              as the pirate toy who wants nothing more than to be played 
-              with by your human owner. Unfortunately, your owner is too busy 
-              with distractions like TV, smartphones, and tablets. It's up to you 
-              to solve a series of whimsical puzzles and riddles to destroy these 
-              distractions and get your owner to play with you.`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`With its colorful and cartoon-like graphics, Play With Me offers 
-              a playful and light-hearted atmosphere that's perfect for gamers of 
-              all ages. As you progress through the game, you'll encounter a variety 
-              of challenges that will test your problem-solving skills and creativity. 
-              From navigating through obstacle courses to manipulating objects in the 
-              environment, you'll need to think outside the box to succeed.`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`Whether you're a fan of puzzle games, pirates, or just looking for a 
-              fun and engaging way to pass the time, Play With Me is the perfect choice. 
-              So set sail on an adventure like no other and help this pirate toy get 
-              the attention it deserves!`}
-            </p>
+            {textList2[3]}
+            {textList2[4]}
+            {textList2[5]}
           </TextSquare>
           <SliderImages images={images} />
         </div>

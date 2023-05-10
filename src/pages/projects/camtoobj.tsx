@@ -5,6 +5,7 @@ import TextSquare from "../../components/textsquare";
 import LowMenu from "../../components/lowmenu";
 import SliderImages from "../../components/sliderimages";
 import Meta from "../../components/meta";
+import { textList3 } from "../../components/texts";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,23 +28,9 @@ export default function Home() {
         </div>
         <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <TextSquare imageUrl="/images/CamToObj.png">
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`The project, which was one of some of the developed projects through the internship 
-              at ProduktiaTV, is a Unity-based project that appears to be a 3D game object viewer with 
-               the capability of adding points that, when clicked, display a written explanation`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`The project contains the source code and assets for the software, 
-              which can be used to create 3D game object visualizations with the additional 
-              feature of explanatory points. The software is built using the Unity game engine 
-              and utilizes various Unity components such as game objects, scripts, and UI elements.`}
-            </p>
-            <p className="font-zyzolText my-4 z-10 text-xl">
-              {`Users can import 3D game objects into the software and create 
-              explanatory points that can be placed within the 3D scene. When 
-              clicked, these points display a written explanation, providing 
-              additional context for the object being viewed.`}
-            </p>
+            {textList3[0]}
+            {textList3[1]}
+            {textList3[2]}
           </TextSquare>
         </div>
         <div className="flex justify-between">
