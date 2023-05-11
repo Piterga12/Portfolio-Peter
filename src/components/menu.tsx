@@ -40,7 +40,7 @@ function Menu() {
           )}
         </li>
         <li className="ml-4">
-          <Link href={"/projects/second"}>Contact</Link>
+          <Link href={"/projects/curriculum"}>Curriculum</Link>
         </li>
       </ul>
     </nav>

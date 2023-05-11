@@ -5,7 +5,6 @@ import TextSquare from "../../components/textsquare";
 import LowMenu from "../../components/lowmenu";
 import Meta from "../../components/meta";
 import { textList4 } from "../../components/texts";
-import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
