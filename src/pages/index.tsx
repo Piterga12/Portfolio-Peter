@@ -1,8 +1,4 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
-import Head from "next/head";
-import Link from "next/link";
 import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
 import TextSquare from "../components/textsquare";
