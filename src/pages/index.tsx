@@ -33,7 +33,7 @@ export default function Home() {
       link: "/projects/unitytest",
     },
     {
-      src: "/images/image4.jpg",
+      src: "/images/musicHead.png",
       alt: "Image 4",
       width: 640,
       height: 360,
