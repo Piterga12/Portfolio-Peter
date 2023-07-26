@@ -25,17 +25,18 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(images.length - 1);
   const [nextSlide, setNextSlide] = useState(1);
+  const [isMoving, setIsMoving] = useState(false);
 
   const handleNext = () => {
-    setCurrentSlide((currentSlide + 1) % images.length);
-    setPrevSlide(currentSlide);
-    setNextSlide((currentSlide + 2) % images.length);
-  };
-
-  const handlePrev = () => {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
     setNextSlide(currentSlide);
     setPrevSlide(prevSlide === 0 ? images.length - 1 : prevSlide - 1);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((currentSlide + 1) % images.length);
+    setPrevSlide(currentSlide);
+    setNextSlide((currentSlide + 2) % images.length);
   };
 
   useEffect(() => {
@@ -45,38 +46,31 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
+  const handleTransitionEnd = () => {
+    setIsMoving(false);
+  };
+
   return (
-    <div className="relative w-full h-96">
+    <div className="relative w-full h-96 overflow-hidden">
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-full text-center">
         {images.map((image, index) => (
           <a key={index} href={image.link}>
-            {index === currentSlide && (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 right-0 bottom-0 m-auto object-cover z-20`}
-                width={image.width}
-                height={image.height}
-              />
-            )}
-            {index === prevSlide && (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 left-0 bottom-0 opacity-25 object-cover z-10`}
-                width={image.width}
-                height={image.height}
-              />
-            )}
-            {index === nextSlide && (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={`transition-opacity duration-1000 ease-in-out absolute top-0 right-0 bottom-0 opacity-25 object-cover`}
-                width={image.width}
-                height={image.height}
-              />
-            )}
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className={`absolute top-0 left-0 right-0 bottom-0 m-auto object-cover ${
+                index === currentSlide
+                  ? "z-30 opacity-100 transition-all duration-1000 ease-in-out"
+                  : index === prevSlide
+                  ? "z-20 opacity-50 left-2/3 transition-all duration-1000 ease-in-out"
+                  : index === nextSlide
+                  ? "z-20 opacity-50 right-2/3 transition-all duration-1000 ease-in-out"
+                  : "z-10 opacity-0"
+              }`}
+              width={image.width}
+              height={image.height}
+              onTransitionEnd={handleTransitionEnd}
+            />
           </a>
         ))}
       </div>
@@ -99,6 +93,14 @@ const SliderImages: React.FC<SliderImagesProps> = ({ images }) => {
       <style jsx>{`
         .button:hover {
           background-color: #4a5568;
+        }
+
+        .opacity-100 {
+          opacity: 1;
+        }
+
+        .opacity-50 {
+          opacity: 0.5;
         }
       `}</style>
     </div>

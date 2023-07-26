@@ -55,17 +55,18 @@ export default function Home() {
           <source src="/videos/backgroundLight.mp4" type="video/mp4" />
         </video>
         <div>
-          <p className="font-zyzol invisible text-4xl">About Me</p>
+          <p className="font-zyzol invisible text-4xl">Space</p>
         </div>
+        <SliderImages images={images} />
         <div className="margin-top-16">
-          <TextSquare imageUrl="/images/PeterG-A.jpg">
+          <TextSquare>
             {textList[0]}
             {textList[1]}
             {textList[2]}
             {textList[3]}
           </TextSquare>
         </div>
-        <SliderImages images={images} />
+
         <div className="margin-top-16">
           <TextSquare>
             {textList[4]}
