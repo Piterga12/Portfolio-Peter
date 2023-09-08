@@ -3,6 +3,7 @@ import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
+import SliderImages2 from "../components/sliderimages2";
 import Meta from "../components/meta";
 import Assistant from "../components/assistant";
 import { textList } from "../components/texts";
@@ -10,34 +11,24 @@ import { textList } from "../components/texts";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const images = [
+  const videos = [
     {
-      src: "/images/PlayWithMe.png",
+      src: "/videos/PlayWithMeIntro.mp4",
+      type: "video/mp4",
       alt: "Play with Me",
-      width: 640,
-      height: 360,
       link: "/projects/playwithme",
     },
     {
-      src: "/images/CamToObj.png",
-      alt: "Camera to Obj",
-      width: 640,
-      height: 360,
-      link: "/projects/camtoobj",
+      src: "/videos/StarFallRebellionIntro.mp4",
+      type: "video/mp4",
+      alt: "StarFallRebellion",
+      link: "https://starfall-rebellion.vercel.app/",
     },
     {
-      src: "/images/UnityTest.png",
-      alt: "2D Unity Game Test",
-      width: 640,
-      height: 360,
-      link: "/projects/unitytest",
-    },
-    {
-      src: "/images/musicHead.png",
-      alt: "Image 4",
-      width: 640,
-      height: 360,
-      link: "/projects/second",
+      src: "/videos/MusicHeadIntro.mp4",
+      type: "video/mp4",
+      alt: "MusicHead",
+      link: "/projects/musichead",
     },
   ];
 
@@ -57,7 +48,10 @@ export default function Home() {
         <div>
           <p className="font-zyzol invisible text-4xl">Space</p>
         </div>
-        <SliderImages images={images} />
+        <SliderImages2 videos={videos} />
+        <div>
+          <p className="font-zyzol invisible text-4xl">Space</p>
+        </div>
         <div className="margin-top-16">
           <TextSquare>
             {textList[0]}
@@ -67,16 +61,7 @@ export default function Home() {
           </TextSquare>
         </div>
 
-        <div className="margin-top-16">
-          <TextSquare>
-            {textList[4]}
-            {textList[5]}
-            {textList[6]}
-            {textList[7]}
-            {textList[8]}
-            {textList[9]}
-          </TextSquare>
-        </div>
+        <div className="margin-top-16"></div>
         <Assistant />
       </main>
       <LowMenu />

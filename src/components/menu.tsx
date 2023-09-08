@@ -6,13 +6,16 @@ import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 flex w-full bg-gray-900 text-white justify-between px-6 py-4 z-50">
+    <nav className="sticky top-0 flex w-full bg-gray-700 text-white justify-between px-6 py-4 z-50">
       <div>
         <Link href={"/"} className="font-bold text-lg">
-          Home
+          Pedro González-Anta
         </Link>
       </div>
       <ul className="flex">
+        <li className="ml-8 mr-8">
+          <Link href={"/projects/contactme"}>Contact Me</Link>
+        </li>
         <li className="ml-4">
           <button
             onClick={() => setIsOpen((prev) => !prev)}

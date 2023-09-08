@@ -19,8 +19,8 @@ export default function MyPDFViewer() {
       >
         <source src="/videos/backgroundLight.mp4" type="video/mp4" />
       </video>
-      <main className="flex flex-col items-center justify-between">
-        <div className="hidden h-screen sm:block">
+      <main className="flex flex-col items-center justify-between overflow-hidden">
+        <div className="hidden h-screen w-screen sm:block">
           <embed
             className="h-full w-full"
             src={`/documents/${pdfUrl}`}

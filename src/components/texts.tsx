@@ -1,15 +1,13 @@
 import React from "react";
 
 export const textList = [
-  <p key="paragraph1" className="my-4 font-serif text-2xl z-10">
-    {`Hi, I'm Pedro González-Anta Torrents-Faura!`}
+  <p key="paragraph1" className="my-4 font-serif text-4xl z-10">
+    {`About Me`}
   </p>,
   <p key="paragraph2" className="my-4 font-serif text-xl z-10">
-    {`I'm a junior video game developer with a strong
-  background in programming languages like C++ and experience using
-  Unity to create exciting games. I'm passionate about game
-  development, and my LinkedIn profile showcases my academic
-  background, experience, and skills in this field.`}
+    {`Hi, I'm Pedro González-Anta Torrents-Faura! I'm a junior video game developer with a background in programming languages like C++,
+     CSharp and experience using an in-house game Engine and Unity to create exciting games. 
+     I'm passionate about game development, and I'm looking forward to learn much more about it.`}
   </p>,
   <p key="paragraph3" className="my-4 font-serif text-xl z-10">
     {`Through my projects and internships, I have developed strong problem-solving
@@ -19,8 +17,8 @@ export const textList = [
   </p>,
   <p key="paragraph4" className="my-4 font-serif text-xl z-10">
     {`In addition to my technical skills, 
-  I'm fluent in Spanish, Catalan, and English, which can
-  be a valuable asset for companies with international operations or
+  I'm fluent in Spanish, Catalan, and English, and have basic knowledge on German, 
+  which can be a valuable asset for companies with international operations or
   clients. Overall, I'm a motivated and skilled video
   game developer with a strong work ethic and a commitment to
   delivering high-quality work. I'm excited to continue learning
@@ -151,5 +149,26 @@ export const textList4 = [
     {`Overall, this project serves as a basic introduction to creating 2D 
   games using Unity, and provides a starting point for further learning 
   and experimentation with game development techniques.`}
+  </p>,
+];
+
+export const textList5 = [
+  <p key="paragraph1" className="font-zyzolText my-4 z-10 text-xl">
+    {`The project is a 2D Unity game to show my knowledge on unity
+    creating games in 2D. The assets on this project have been all drawn by me`}
+  </p>,
+  <p key="paragraph2" className="font-zyzolText my-4 z-10 text-xl">
+    {`The project contains the source code and assets for the game, 
+  which can be used as a reference for learning how to create 2D 
+  games using Unity. The game features event triggers that allow 
+  certain actions to be performed when the player enters a certain 
+  area, such as spawning enemies or triggering animations.`}
+  </p>,
+  <p key="paragraph3" className="font-zyzolText my-4 z-10 text-xl">
+    {`The Boss has two phases and depending on the phase he will
+    behave differently.`}
+  </p>,
+  <p key="paragraph4" className="font-zyzolText my-4 z-10 text-xl">
+    {`Overall, this project shows a simple but yet complete 2D Unity Game.`}
   </p>,
 ];

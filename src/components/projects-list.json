@@ -4,8 +4,12 @@
     "link": "/projects/playwithme"
   },
   {
-    "project": "Vr web",
-    "link": "/projects/second"
+    "project": "StarFall Rebellion",
+    "link": "https://starfall-rebellion.vercel.app/"
+  },
+  {
+    "project": "Music Head",
+    "link": "/projects/musichead"
   },
   {
     "project": "Camera to Obj",
