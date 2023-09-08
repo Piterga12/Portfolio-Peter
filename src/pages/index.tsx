@@ -62,7 +62,6 @@ export default function Home() {
         </div>
 
         <div className="margin-top-16"></div>
-        <Assistant />
       </main>
       <LowMenu />
     </>
