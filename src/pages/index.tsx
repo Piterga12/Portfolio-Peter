@@ -52,7 +52,10 @@ export default function Home() {
         <div>
           <p className="font-zyzol invisible text-4xl">Space</p>
         </div>
-        <div className="margin-top-16">
+        <div className="bg-slate-900">
+          <p className="font-zyzol invisible text-4xl">Space</p>
+        </div>
+        <div id="about" className="margin-top-16">
           <TextSquare>
             {textList[0]}
             {textList[1]}
