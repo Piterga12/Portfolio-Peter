@@ -19,6 +19,7 @@ interface SliderVideoProps {
 interface SliderImagesProps {
   videos: SliderVideoProps[]; // Use 'videos' instead of 'images'
 }
+// ... (other imports)
 
 const SliderVideos: React.FC<SliderImagesProps> = ({ videos }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,8 +57,13 @@ const SliderVideos: React.FC<SliderImagesProps> = ({ videos }) => {
     }
   };
 
+  const fixedMargin = 8; // Set the fixed margin value
+
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div
+      className="relative w-full "
+      style={{ width: "100%", paddingTop: "50%", overflow: "hidden" }}
+    >
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-full text-center">
         {videos.map((video, index) => (
           <div key={index}>
@@ -69,10 +75,14 @@ const SliderVideos: React.FC<SliderImagesProps> = ({ videos }) => {
                 index === currentSlide
                   ? "z-30 opacity-100 transition-all duration-1000 ease-in-out"
                   : index === prevSlide
-                  ? "z-20 opacity-50 left-2/3 transition-all duration-1000 ease-in-out"
+                  ? "z-20 opacity-50 left-1/2 transition-all duration-1000 ease-in-out"
                   : index === nextSlide
-                  ? "z-20 opacity-50 right-2/3 transition-all duration-1000 ease-in-out"
+                  ? "z-20 opacity-50 right-1/2 transition-all duration-1000 ease-in-out"
                   : "z-10 opacity-0"
+              } ${
+                index === currentSlide
+                  ? `w-3/4 mx-auto mt-${fixedMargin} mb-${fixedMargin}` // Set the custom width and fixed margin for the currently displayed video
+                  : "w-full mt-8 mb-8" // Set the width and margin for videos in the back
               }`}
               onTransitionEnd={handleTransitionEnd}
               onClick={() => handleVideoClick(video.link)}

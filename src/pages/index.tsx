@@ -81,9 +81,6 @@ export default function Home() {
         >
           <source src="/videos/backgroundLight.mp4" type="video/mp4" />
         </video>
-        <div>
-          <p className="font-zyzol invisible text-4xl">Space</p>
-        </div>
         <SliderImages2 videos={videos} />
         <div>
           <p className="font-zyzol invisible text-4xl">Space</p>
