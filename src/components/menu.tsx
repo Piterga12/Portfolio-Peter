@@ -8,21 +8,31 @@ function Menu() {
   return (
     <nav className="sticky top-0 flex w-full bg-slate-900 text-white justify-between px-6 py-4 z-50">
       <div>
-        <Link href={"/"} className="font-bold text-lg">
+        <Link href={"/"} className="font-oswald text-2xl">
           Pedro González-Anta
         </Link>
       </div>
       <ul className="flex">
         <li className="ml-8 mr-8">
-          <Link href={"/projects/contactme"}>Contact Me</Link>
+          <Link
+            href={"/#about"}
+            className="cursor-pointer hover:underline font-oswald text-xl"
+          >
+            About Me
+          </Link>
         </li>
-        <li className="ml-4">
-          <Link href={"/#about"}>Abou Me</Link>
+        <li className="mr-4">
+          <Link
+            href={"/projects/contactme"}
+            className="cursor-pointer hover:underline font-oswald text-xl"
+          >
+            Contact Me
+          </Link>
         </li>
-        <li className="ml-4">
+        <li className="ml-4 mr-4">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="md:mr-10"
+            className="cursor-pointer hover:underline font-oswald text-xl"
           >
             Projects
             {!isOpen ? (
@@ -32,7 +42,7 @@ function Menu() {
             )}
           </button>
           {isOpen && (
-            <div className="bg-gray-900 absolute top-20 flex flex-col items-start rounded-lg p-2">
+            <div className="bg-slate-900 absolute top-20 flex flex-col items-start rounded-lg p-2">
               {list.map((item, i) => (
                 <div
                   className="flex w-full justify-between hover:bg-gray-700 cursor-pointer rounded-r-lg border-l-transparent p-4 hover:border-l-white border-l-4"
@@ -44,8 +54,13 @@ function Menu() {
             </div>
           )}
         </li>
-        <li className="ml-4">
-          <Link href={"/projects/curriculum"}>Curriculum</Link>
+        <li className="ml-4 mr-4">
+          <Link
+            href={"/projects/curriculum"}
+            className="cursor-pointer hover:underline font-oswald text-xl"
+          >
+            Curriculum
+          </Link>
         </li>
       </ul>
     </nav>

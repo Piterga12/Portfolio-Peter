@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zyzol";
+  src: url("/fonts/Zyzol-jEX4v.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zyzol-text";
+  src: url("/fonts/ZyzolOutline-OVr46.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

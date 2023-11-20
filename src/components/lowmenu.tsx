@@ -25,7 +25,7 @@ const LowMenu = () => {
   };
 
   return (
-    <div className="bg-gray-700 w-full py-8">
+    <div className="bg-slate-900 w-full py-8">
       <nav className="flex justify-end items-center mx-8">
         <button
           className="mx-2 mr-4"
