@@ -18,22 +18,24 @@ const TextWithPicture: React.FC<TextWithPictureProps> = ({ packages }) => {
       <a className="font-oswald text-gray-300 underline text-4xl z-10 mb-8">
         Projects
       </a>
-      {packages.map((packageItem, index) => (
-        <div key={index} className="mb-8">
-          <Image
-            src={packageItem.pictureSrc}
-            alt={packageItem.alt}
-            width={400} // Set the width you desire
-            height={300} // Set the height you desire
-          />
-          <p className="text-lg text-gray-300 font-oswald">
-            {packageItem.text}
-          </p>
-          <p className="text-lg font-raleway text-gray-300">
-            {packageItem.text2}
-          </p>
-        </div>
-      ))}
+      <div className="flex flex-wrap justify-center">
+        {packages.map((packageItem, index) => (
+          <div key={index} className="mb-8 mx-4">
+            <Image
+              src={packageItem.pictureSrc}
+              alt={packageItem.alt}
+              width={400} // Set the width you desire
+              height={300} // Set the height you desire
+            />
+            <p className="text-lg text-gray-300 font-oswald">
+              {packageItem.text}
+            </p>
+            <p className="text-lg font-raleway text-gray-300">
+              {packageItem.text2}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

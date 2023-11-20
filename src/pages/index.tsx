@@ -37,15 +37,33 @@ export default function Home() {
   const packages = [
     {
       pictureSrc: "/images/PlayWithMe.png",
+      alt: "Lego Star Wars: StarFall Rebellion",
+      text: "Lego Star Wars: StarFall Rebellion",
+      text2: "C++ Programmer",
+    },
+    {
+      pictureSrc: "/images/PlayWithMe.png",
+      alt: "Axolotl Engine",
+      text: "Axolotl Engine",
+      text2: "C++ Programmer",
+    },
+    {
+      pictureSrc: "/images/PlayWithMe.png",
       alt: "Play with Me",
       text: "Play With Me",
-      text2: "Gameplay Programmer",
+      text2: "C# Programmer",
     },
     {
       pictureSrc: "/images/MusicHead.png",
       alt: "Music head",
       text: "MusicHead",
-      text2: "Gameplay Programmer",
+      text2: "C# Programmer",
+    },
+    {
+      pictureSrc: "/images/MusicHead.png",
+      alt: "Music head",
+      text: "MusicHead",
+      text2: "C# Programmer",
     },
     // Add more packages as needed
   ];
