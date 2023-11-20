@@ -8,7 +8,10 @@ function Menu() {
   return (
     <nav className="sticky top-0 flex w-full bg-slate-900 text-white justify-between px-6 py-4 z-50">
       <div>
-        <Link href={"/"} className="font-oswald text-2xl">
+        <Link
+          href={"/"}
+          className="cursor-pointer hover:underline font-oswald text-2xl"
+        >
           Pedro González-Anta
         </Link>
       </div>
@@ -45,7 +48,7 @@ function Menu() {
             <div className="bg-slate-900 absolute top-20 flex flex-col items-start rounded-lg p-2">
               {list.map((item, i) => (
                 <div
-                  className="flex w-full justify-between hover:bg-gray-700 cursor-pointer rounded-r-lg border-l-transparent p-4 hover:border-l-white border-l-4"
+                  className="flex w-full justify-between font-raleway hover:bg-gray-700 cursor-pointer rounded-r-lg border-l-transparent p-4 hover:border-l-white border-l-4"
                   key={i}
                 >
                   <Link href={item.link}>{item.project}</Link>
