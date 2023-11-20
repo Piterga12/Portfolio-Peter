@@ -25,8 +25,8 @@ const TextSquare: React.FC<TextSquareProps> = ({
   };
 
   const containerClasses = imageUrl
-    ? "flex flex-col md:flex-row items-center md:mb-8"
-    : "flex flex-col md:flex-row items-center md:mb-8 md:justify-center";
+    ? "flex flex-col md:flex-row items-center "
+    : "flex flex-col md:flex-row items-center  md:justify-center";
 
   return (
     <div className={containerClasses}>

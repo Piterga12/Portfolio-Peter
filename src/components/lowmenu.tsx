@@ -25,7 +25,14 @@ const LowMenu = () => {
   };
 
   return (
-    <div className="bg-slate-900 w-full py-8">
+    <div className="bg-slate-900 bg-opacity-80 w-full py-8 flex justify-between items-center">
+      {/* Left side with the copyright text in the middle */}
+      <div className="flex items-center mx-8">
+        <a className="font-oswald text-gray-400 text-xl text-center">
+          Copyright © 2023 by Pedro González-Anta | All images, logos, and names
+          are used with permission
+        </a>
+      </div>
       <nav className="flex justify-end items-center mx-8">
         <button
           className="mx-2 mr-4"

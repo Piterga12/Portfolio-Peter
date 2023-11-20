@@ -24,15 +24,8 @@ function Menu() {
             About Me
           </Link>
         </li>
+
         <li className="mr-4">
-          <Link
-            href={"/projects/contactme"}
-            className="cursor-pointer hover:underline font-oswald text-xl"
-          >
-            Contact Me
-          </Link>
-        </li>
-        <li className="ml-4 mr-4">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="cursor-pointer hover:underline font-oswald text-xl"
@@ -63,6 +56,14 @@ function Menu() {
             className="cursor-pointer hover:underline font-oswald text-xl"
           >
             Curriculum
+          </Link>
+        </li>
+        <li className="ml-4 mr-4">
+          <Link
+            href={"/#contact"}
+            className="cursor-pointer hover:underline font-oswald text-xl"
+          >
+            Contact Me
           </Link>
         </li>
       </ul>

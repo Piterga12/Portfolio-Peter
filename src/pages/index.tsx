@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
+import ContactMe from "../components/contactme";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
 import SliderImages2 from "../components/sliderimages2";
@@ -63,8 +64,9 @@ export default function Home() {
             {textList[3]}
           </TextSquare>
         </div>
-
-        <div className="margin-top-16"></div>
+        <div id="contact">
+          <ContactMe />
+        </div>
         <Assistant />
       </main>
       <LowMenu />
