@@ -43,7 +43,7 @@ function Menu() {
             )}
           </button>
           {isOpen && (
-            <div className="bg-slate-900 absolute top-20 flex flex-col items-start rounded-lg p-2">
+            <div className="bg-slate-900 absolute top-20 flex flex-col items-start rounded-lg p-2 border border-white">
               {list.map((item, i) => (
                 <div
                   className="flex w-full justify-between font-raleway hover:bg-gray-700 cursor-pointer rounded-r-lg border-l-transparent p-4 hover:border-l-white border-l-4"
