@@ -19,7 +19,6 @@ interface SliderVideoProps {
 interface SliderImagesProps {
   videos: SliderVideoProps[]; // Use 'videos' instead of 'images'
 }
-// ... (other imports)
 
 const SliderVideos: React.FC<SliderImagesProps> = ({ videos }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,8 +80,8 @@ const SliderVideos: React.FC<SliderImagesProps> = ({ videos }) => {
                   : "z-10 opacity-0"
               } ${
                 index === currentSlide
-                  ? `w-3/4 mx-auto mt-${fixedMargin} mb-${fixedMargin}` // Set the custom width and fixed margin for the currently displayed video
-                  : "w-full mt-8 mb-8" // Set the width and margin for videos in the back
+                  ? `w-3/4 mx-auto mt-${fixedMargin} mb-${fixedMargin} cursor-pointer` // Set the custom width and fixed margin for the currently displayed video
+                  : "w-full mt-8 mb-8 cursor-pointer" // Set the width and margin for videos in the back
               }`}
               onTransitionEnd={handleTransitionEnd}
               onClick={() => handleVideoClick(video.link)}
