@@ -96,7 +96,9 @@ export default function Home() {
             {textList[3]}
           </TextSquare>
         </div>
-        <TextWithPicture packages={packages} />
+        <div id="projects">
+          <TextWithPicture packages={packages} />
+        </div>
         <div id="contact">
           <ContactMe />
         </div>

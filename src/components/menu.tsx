@@ -30,7 +30,12 @@ function Menu() {
             onClick={() => setIsOpen((prev) => !prev)}
             className="cursor-pointer hover:underline font-oswald text-xl"
           >
-            Projects
+            <Link
+              href={"/#projects"}
+              className="cursor-pointer hover:underline font-oswald text-xl"
+            >
+              Projects
+            </Link>
             {!isOpen ? (
               <AiOutlineCaretDown className="w-16 active:text-black" />
             ) : (
