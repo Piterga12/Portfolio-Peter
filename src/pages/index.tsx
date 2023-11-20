@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
+import TextWithPicture from "../components/textwithpicture";
 import ContactMe from "../components/contactme";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
@@ -31,6 +32,22 @@ export default function Home() {
       alt: "MusicHead",
       link: "/projects/musichead",
     },
+  ];
+
+  const packages = [
+    {
+      pictureSrc: "/images/PlayWithMe.png",
+      alt: "Play with Me",
+      text: "Play With Me",
+      text2: "Gameplay Programmer",
+    },
+    {
+      pictureSrc: "/images/MusicHead.png",
+      alt: "Music head",
+      text: "MusicHead",
+      text2: "Gameplay Programmer",
+    },
+    // Add more packages as needed
   ];
 
   return (
@@ -64,6 +81,7 @@ export default function Home() {
             {textList[3]}
           </TextSquare>
         </div>
+        <TextWithPicture packages={packages} />
         <div id="contact">
           <ContactMe />
         </div>
