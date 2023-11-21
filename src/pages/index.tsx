@@ -8,7 +8,6 @@ import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
 import SliderImages2 from "../components/sliderimages2";
 import Meta from "../components/meta";
-import Assistant from "../components/assistant";
 import { textList } from "../components/texts";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -111,7 +110,6 @@ export default function Home() {
         <div id="contact">
           <ContactMe />
         </div>
-        <Assistant />
       </main>
       <LowMenu />
     </>

@@ -26,14 +26,14 @@ export default function Home() {
         <div className="m-4">
           <p className="font-zyzol text-6xl">Camera to 3dObject</p>
         </div>
-        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="bg-white z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <TextSquare imageUrl="/images/CamToObj.png">
             {textList3[0]}
             {textList3[1]}
             {textList3[2]}
           </TextSquare>
         </div>
-        <div className="flex justify-between">
+        <div className="py-4 bg-slate-900 w-full flex items-center justify-center">
           <a href="https://github.com/Piterga12/CamToObj">
             <Image
               className="mr-16"

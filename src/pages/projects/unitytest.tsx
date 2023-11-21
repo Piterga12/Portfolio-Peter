@@ -24,7 +24,7 @@ export default function Home() {
         <div className="m-4">
           <p className="font-zyzol text-6xl">2D Unity Game Test</p>
         </div>
-        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="bg-white z-10 w-full items-center justify-between font-mono text-sm lg:flex">
           <TextSquare imageUrl="/images/UnityTest.png">
             {textList4[0]}
             {textList4[1]}
@@ -32,7 +32,7 @@ export default function Home() {
             {textList4[3]}
           </TextSquare>
         </div>
-        <div className="flex justify-between">
+        <div className="py-4 bg-slate-900 w-full flex items-center justify-center">
           <a href="https://github.com/Piterga12/testgitunity">
             <Image
               className="mr-16"

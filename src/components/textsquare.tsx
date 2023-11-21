@@ -7,6 +7,7 @@ interface TextSquareProps {
   size?: string;
   color?: string;
   imageUrl?: string;
+  bgColor?: string; // Added bgColor prop for background color
 }
 
 const TextSquare: React.FC<TextSquareProps> = ({
@@ -15,6 +16,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
   size = "md",
   color = "white",
   imageUrl,
+  bgColor = "white", // Default background color is white
 }) => {
   const [imageWidth, setImageWidth] = React.useState<number>(0);
   const [imageHeight, setImageHeight] = React.useState<number>(0);
@@ -31,7 +33,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
   return (
     <div className={containerClasses}>
       <div
-        className={`bg-${color} p-16 text-${size} text-center ${
+        className={`bg-${bgColor} p-16 text-${size} text-center ${
           imageUrl ? "md:w-1/2 md:ml-32" : ""
         }`}
       >
@@ -39,7 +41,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
       </div>
       {imageUrl && (
         <div
-          className="bg-white mt-4 md:mt-0 md:ml-16 md:mr-4 flex justify-center"
+          className={`bg-${bgColor} mt-4 md:mt-0 md:ml-16 md:mr-4 flex justify-center`}
           style={{ width: imageWidth, height: imageHeight }}
         >
           <Image
