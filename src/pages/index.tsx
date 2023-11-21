@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Menu from "../components/menu";
 import LowMenu from "../components/lowmenu";
 import TextWithPicture from "../components/textwithpicture";
+import PDFViewer from "../components/curriculum";
 import ContactMe from "../components/contactme";
 import TextSquare from "../components/textsquare";
 import SliderImages from "../components/sliderimages";
@@ -98,6 +99,9 @@ export default function Home() {
         </div>
         <div id="projects">
           <TextWithPicture packages={packages} />
+        </div>
+        <div id="curriculum" className="bg-white">
+          <PDFViewer pdfUrl="PedroGA_CV.pdf" />
         </div>
         <div id="contact">
           <ContactMe />

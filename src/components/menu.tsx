@@ -6,7 +6,7 @@ import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="sticky top-0 flex w-full bg-slate-900 text-white justify-between px-6 py-4 z-50">
+    <nav className="sticky top-0 flex w-full bg-slate-900 text-white justify-between px-6 py-4 z-50 border-b">
       <div>
         <Link
           href={"/"}
@@ -57,7 +57,7 @@ function Menu() {
         </li>
         <li className="ml-4 mr-4">
           <Link
-            href={"/projects/curriculum"}
+            href={"/#curriculum"}
             className="cursor-pointer hover:underline font-oswald text-xl"
           >
             Curriculum
