@@ -37,34 +37,39 @@ export default function Home() {
 
   const packages = [
     {
-      pictureSrc: "/images/PlayWithMe.png",
+      pictureSrc: "/images/StarFall.png",
       alt: "Lego Star Wars: StarFall Rebellion",
       text: "Lego Star Wars: StarFall Rebellion",
       text2: "C++ Programmer",
+      link: "https://starfall-rebellion.vercel.app/",
     },
     {
-      pictureSrc: "/images/PlayWithMe.png",
+      pictureSrc: "/images/Axolotl.png",
       alt: "Axolotl Engine",
       text: "Axolotl Engine",
       text2: "C++ Programmer",
+      link: "https://horizons-games.vercel.app/es",
     },
     {
       pictureSrc: "/images/PlayWithMe.png",
       alt: "Play with Me",
       text: "Play With Me",
       text2: "C# Programmer",
+      link: "/projects/playwithme",
     },
     {
       pictureSrc: "/images/MusicHead.png",
       alt: "Music head",
       text: "MusicHead",
       text2: "C# Programmer",
+      link: "/projects/musichead",
     },
     {
       pictureSrc: "/images/MusicHead.png",
       alt: "Music head",
       text: "MusicHead",
       text2: "C# Programmer",
+      link: "/projects/musichead",
     },
     // Add more packages as needed
   ];
