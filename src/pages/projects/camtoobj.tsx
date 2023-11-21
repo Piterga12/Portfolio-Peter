@@ -7,8 +7,20 @@ import SliderImages from "../../components/sliderimages";
 import Meta from "../../components/meta";
 import { textList3 } from "../../components/texts";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faChrome } from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
+const handleGithubClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  event.preventDefault();
+  window.open("https://github.com/Piterga12/CamToObj", "_blank");
+};
+
+const handleWebClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  event.preventDefault();
+  window.open("https://piterga12.github.io/CamToObj", "_blank");
+};
+
 export default function Home() {
   return (
     <>
@@ -34,23 +46,20 @@ export default function Home() {
           </TextSquare>
         </div>
         <div className="py-4 bg-slate-900 w-full flex items-center justify-center">
-          <a href="https://github.com/Piterga12/CamToObj">
-            <Image
-              className="mr-16"
-              src="/images/GitHubButton.png"
-              alt="GitHub Button"
-              width={640}
-              height={360}
-            ></Image>
-          </a>
-          <a href="https://piterga12.github.io/CamToObj/">
-            <Image
-              src="/images/WebButton.png"
-              alt="Web Button"
-              width={200}
-              height={200}
-            ></Image>
-          </a>
+          <button
+            className=" mx-2 mr-4"
+            onClick={handleGithubClick}
+            aria-label="Github"
+          >
+            <FontAwesomeIcon icon={faGithub} size="6x" className="text-white" />
+          </button>
+          <button
+            className=" mx-2 mr-4"
+            onClick={handleWebClick}
+            aria-label="Github"
+          >
+            <FontAwesomeIcon icon={faChrome} size="6x" className="text-white" />
+          </button>
         </div>
       </main>
       <LowMenu />

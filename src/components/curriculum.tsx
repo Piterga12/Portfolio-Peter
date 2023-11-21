@@ -12,9 +12,9 @@ interface PDFViewerProps {
 const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => (
   <>
     <div className="flex flex-col items-center justify-between overflow-hidden">
-      <a className="mt-16 font-oswald text-slate-900 underline text-4xl z-10">
+      <h2 className="mt-16 font-oswald text-slate-900 underline text-4xl z-10">
         Curriculum
-      </a>
+      </h2>
       <embed
         className="my-8 h-screen w-full sm:w-2/3"
         src={`/documents/${pdfUrl}#zoom=25`}

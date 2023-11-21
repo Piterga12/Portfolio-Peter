@@ -5,8 +5,15 @@ import TextSquare from "../../components/textsquare";
 import LowMenu from "../../components/lowmenu";
 import Meta from "../../components/meta";
 import { textList4 } from "../../components/texts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
+const handleGithubClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  event.preventDefault();
+  window.open("https://github.com/Piterga12/testgitunity", "_blank");
+};
+
 export default function Home() {
   return (
     <>
@@ -33,15 +40,13 @@ export default function Home() {
           </TextSquare>
         </div>
         <div className="py-4 bg-slate-900 w-full flex items-center justify-center">
-          <a href="https://github.com/Piterga12/testgitunity">
-            <Image
-              className="mr-16"
-              src="/images/GitHubButton.png"
-              alt="GitHub Button"
-              width={640}
-              height={360}
-            ></Image>
-          </a>
+          <button
+            className=" mx-2 mr-4"
+            onClick={handleGithubClick}
+            aria-label="Github"
+          >
+            <FontAwesomeIcon icon={faGithub} size="6x" className="text-white" />
+          </button>
         </div>
       </main>
       <LowMenu />

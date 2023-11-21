@@ -19,9 +19,9 @@ const TextWithPicture: React.FC<TextWithPictureProps> = ({ packages }) => {
 
   return (
     <div className="flex flex-col py-8 bg-slate-900 items-center">
-      <a className="font-oswald text-gray-300 underline text-4xl z-10 mt-8 mb-8">
+      <h2 className="font-oswald text-gray-300 underline text-4xl z-10 mt-8 mb-8">
         Projects
-      </a>
+      </h2>
       <div className="flex flex-wrap justify-center">
         {packages.map((packageItem, index) => (
           <div

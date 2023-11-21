@@ -9,11 +9,16 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function ContactMe() {
+  const handleGithubClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    window.open("https://github.com/Piterga12", "_blank");
+  };
   const handleTwitterClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     window.open("https://twitter.com/Peterga_12", "_blank");
@@ -44,24 +49,43 @@ export default function ContactMe() {
         <nav className="flex justify-center items-center">
           <button
             className="mx-4"
+            onClick={handleGithubClick}
+            aria-label="Github"
+          >
+            <FontAwesomeIcon icon={faGithub} size="4x" className="text-white" />
+          </button>
+          <button
+            className="mx-4"
             onClick={handleTwitterClick}
             aria-label="Twitter"
           >
-            <FontAwesomeIcon icon={faTwitter} size="4x" />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              size="4x"
+              className="text-white"
+            />
           </button>
           <button
             className="mx-4"
             onClick={handleInstagramClick}
             aria-label="Instagram"
           >
-            <FontAwesomeIcon icon={faInstagram} size="4x" />
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="4x"
+              className="text-white"
+            />
           </button>
           <button
             className="mx-4"
             onClick={handleLinkedInClick}
             aria-label="LinkedIn"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="4x" />
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size="4x"
+              className="text-white"
+            />
           </button>
         </nav>
         <div className="text-gray-300 font-ralewaySemibold mt-4 mb-4">

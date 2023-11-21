@@ -3,9 +3,15 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const LowMenu = () => {
+  const handleGithubClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    window.open("https://github.com/Piterga12", "_blank");
+  };
+
   const handleTwitterClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     window.open("https://twitter.com/Peterga_12", "_blank");
@@ -28,32 +34,43 @@ const LowMenu = () => {
     <div className="bg-slate-900 bg-opacity-80 w-full py-8 flex justify-between items-center">
       {/* Left side with the copyright text in the middle */}
       <div className="flex items-center mx-8">
-        <a className="font-oswald text-gray-400 text-xl text-center">
+        <h3 className="font-oswald text-gray-400 text-xl text-center">
           Copyright © 2023 by Pedro González-Anta | All images, logos, and names
           are used with permission
-        </a>
+        </h3>
       </div>
       <nav className="flex justify-end items-center mx-8">
+        <button
+          className=" mx-2 mr-4"
+          onClick={handleGithubClick}
+          aria-label="Github"
+        >
+          <FontAwesomeIcon icon={faGithub} size="2x" className="text-white" />
+        </button>
         <button
           className="mx-2 mr-4"
           onClick={handleTwitterClick}
           aria-label="Twitter"
         >
-          <FontAwesomeIcon icon={faTwitter} size="2x" />
+          <FontAwesomeIcon icon={faTwitter} size="2x" className="text-white" />
         </button>
         <button
           className="mx-2 mr-4"
           onClick={handleInstagramClick}
           aria-label="Instagram"
         >
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+          <FontAwesomeIcon
+            icon={faInstagram}
+            size="2x"
+            className="text-white"
+          />
         </button>
         <button
           className="mx-2 mr-4"
           onClick={handleLinkedInClick}
           aria-label="LinkedIn"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-white" />
         </button>
       </nav>
     </div>
