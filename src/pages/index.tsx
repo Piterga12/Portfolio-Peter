@@ -57,14 +57,14 @@ export default function Home() {
       link: "/projects/playwithme",
     },
     {
-      pictureSrc: "/images/MusicHead.png",
+      pictureSrc: "/images/musicHead.png",
       alt: "Music head",
       text: "MusicHead",
       text2: "C# Programmer",
       link: "/projects/musichead",
     },
     {
-      pictureSrc: "/images/MusicHead.png",
+      pictureSrc: "/images/musicHead.png",
       alt: "Music head",
       text: "MusicHead",
       text2: "C# Programmer",
