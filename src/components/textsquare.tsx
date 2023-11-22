@@ -33,7 +33,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
   return (
     <div className={containerClasses}>
       <div
-        className={`bg-${bgColor} p-16 text-${size} text-center ${
+        className={`bg-${bgColor} p-16 text-${size} ${
           imageUrl ? "md:w-1/2 md:ml-32" : ""
         }`}
       >

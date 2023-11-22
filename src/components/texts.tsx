@@ -3,7 +3,7 @@ import React from "react";
 export const textList = [
   <p
     key="paragraph1"
-    className="my-4 font-oswald text-slate-900 underline text-4xl z-10"
+    className="my-4 font-oswald text-slate-900 underline text-4xl z-10 text-center"
   >
     {`About Me`}
   </p>,
