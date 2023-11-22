@@ -49,7 +49,7 @@ const TextWithPicture: React.FC<TextWithPictureProps> = ({ packages }) => {
                 </div>
               </div>
             </Link>
-            <p className="text-lg text-gray-300 font-oswald">
+            <p className="text-2xl text-gray-300 font-oswald">
               {packageItem.text}
             </p>
             <p className="text-lg font-raleway text-gray-300">
