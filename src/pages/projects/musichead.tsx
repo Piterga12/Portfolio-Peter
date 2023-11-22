@@ -33,7 +33,7 @@ export default function Home() {
         <div className="m-4">
           <p className="font-zyzol text-6xl m-6">Music Head</p>
           <video autoPlay muted controls>
-            <source src="/videos/MusicHeadIntro.mp4" type="video/mp4" />
+            <source src="/videos/MusicHeadGameplay.mp4" type="video/mp4" />
           </video>
         </div>
         <div className=" w-full items-center justify-between">
