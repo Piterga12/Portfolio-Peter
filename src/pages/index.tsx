@@ -64,11 +64,18 @@ export default function Home() {
       link: "/projects/musichead",
     },
     {
-      pictureSrc: "/images/musicHead.png",
-      alt: "Music head",
-      text: "MusicHead",
+      pictureSrc: "/images/CamToObj.png",
+      alt: "Cam to obj",
+      text: "Camera to Object (VR)",
       text2: "C# Programmer",
-      link: "/projects/musichead",
+      link: "/projects/camtoobj",
+    },
+    {
+      pictureSrc: "/images/UnityTest.png",
+      alt: "UnityTest",
+      text: "2D Unity Test",
+      text2: "C# Programmer",
+      link: "/projects/unitytest",
     },
     // Add more packages as needed
   ];
