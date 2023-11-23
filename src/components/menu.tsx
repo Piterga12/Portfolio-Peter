@@ -27,12 +27,19 @@ function Menu() {
 
   const handleMenuItemClick = (path: string) => {
     setIsOpen(false);
-    const targetElement = document.querySelector(path);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push(path);
+
+    // If not on the index page, navigate to the index first
+    if (router.pathname !== "/") {
+      router.push("/", undefined, { shallow: true });
     }
+
+    // Wait for the navigation to complete and then scroll to the section
+    setTimeout(() => {
+      const targetElement = document.querySelector(path);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Adjust the delay if needed
   };
 
   return (
