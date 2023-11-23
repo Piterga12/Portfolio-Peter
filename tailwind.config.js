@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         zyzol: ["Zyzol", "cursive"],
         zyzolText: ["Zyzol-text", "cursive"],
+        oswald: ["Oswald", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        ralewaySemibold: ["RalewaySemiBold", "sans-serif"],
       },
     },
   },

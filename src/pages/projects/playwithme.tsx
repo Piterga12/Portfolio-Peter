@@ -68,8 +68,8 @@ export default function Home() {
             <source src="/videos/PlayWithMe-Trailer.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
-          <TextSquare imageUrl="/images/PlayWithMe.png">
+        <div className="z-10 w-full bg-slate-900 items-center justify-between font-mono text-sm lg:flex">
+          <TextSquare bgColor="slate-900" imageUrl="/images/PlayWithMe.png">
             {textList2[0]}
             {textList2[1]}
             {textList2[2]}
@@ -83,7 +83,7 @@ export default function Home() {
           </TextSquare>
           <SliderImages images={images} />
         </div>
-        <div>
+        <div className="py-4 bg-slate-900 w-full flex items-center justify-center">
           <a href="https://store.steampowered.com/app/2051650/Play_With_Me/">
             <Image
               src="/images/SteamButton.png"

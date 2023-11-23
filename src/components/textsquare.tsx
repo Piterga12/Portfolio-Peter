@@ -7,14 +7,16 @@ interface TextSquareProps {
   size?: string;
   color?: string;
   imageUrl?: string;
+  bgColor?: string; // Added bgColor prop for background color
 }
 
 const TextSquare: React.FC<TextSquareProps> = ({
   text,
   children,
   size = "md",
-  color = "gray",
+  color = "white",
   imageUrl,
+  bgColor = "white", // Default background color is white
 }) => {
   const [imageWidth, setImageWidth] = React.useState<number>(0);
   const [imageHeight, setImageHeight] = React.useState<number>(0);
@@ -25,13 +27,13 @@ const TextSquare: React.FC<TextSquareProps> = ({
   };
 
   const containerClasses = imageUrl
-    ? "flex flex-col md:flex-row items-center md:mb-8"
-    : "flex flex-col md:flex-row items-center md:mb-8 md:justify-center";
+    ? "flex flex-col md:flex-row items-center "
+    : "flex flex-col md:flex-row items-center  md:justify-center";
 
   return (
     <div className={containerClasses}>
       <div
-        className={`bg-${color}-700 opacity-80 border-2 border-black rounded-md p-16 text-${size} text-center ${
+        className={`bg-${bgColor} p-16 text-${size} ${
           imageUrl ? "md:w-1/2 md:ml-32" : ""
         }`}
       >
@@ -39,7 +41,7 @@ const TextSquare: React.FC<TextSquareProps> = ({
       </div>
       {imageUrl && (
         <div
-          className="bg-gray-700 bg-opacity-80 border-2 border-black rounded-md mt-4 md:mt-0 md:ml-16 md:mr-4 flex justify-center"
+          className={`bg-${bgColor} mt-4 md:mt-0 md:ml-16 md:mr-4 flex justify-center`}
           style={{ width: imageWidth, height: imageHeight }}
         >
           <Image
