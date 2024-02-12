@@ -32,9 +32,22 @@ export default function Home() {
       alt: "MusicHead",
       link: "/projects/musichead",
     },
+    {
+      src: "/videos/CustomTools.mp4",
+      type: "video/mp4",
+      alt: "CustomTools",
+      link: "https://github.com/Piterga12/Tools-Programming",
+    },
   ];
 
   const packages = [
+    {
+      pictureSrc: "/images/CustomTools.png",
+      alt: "Unity Custom Tools",
+      text: "Unity Cutsom Tools",
+      text2: "Tools C# Programmer",
+      link: "https://github.com/Piterga12/Tools-Programming",
+    },
     {
       pictureSrc: "/images/StarFall.png",
       alt: "Lego Star Wars: StarFall Rebellion",
